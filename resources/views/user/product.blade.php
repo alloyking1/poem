@@ -19,9 +19,8 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <a href="/product/single/{{$each->id}}">
-                                        <p>{{ $each->name }}</p>
-                                        <p>{{ $each->description }}</p>
-                                        <p>{{ $each->price }}</p>
+                                        <p>{{ $each->title }}</p>
+                                        <p>{{ $each->content }}</p>
                                     </a>
                                 </div>
                             </div>

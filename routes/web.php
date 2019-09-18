@@ -23,6 +23,11 @@ Route::get('/product/{id?}', 'ProductsController@Allproduct');
 Route::get('/product/single/{id?}', 'ProductsController@SingleProduct');
 Route::post('/order/gig/{id?}', 'OrderController@OrderProduct');
 
+// auth user route
+Route::prefix('user')->group(function(){
+    Route::post('/poem/upload', 'ProductsController@PoemUpload');
+});
+
 // admin routes
 Route::prefix('admin')->group(function(){
     Route::get('/home', 'AdminController@index');

@@ -40,4 +40,9 @@ class User extends Authenticatable
     public function hasOrder(){
        return $this->hasMany('App\Order');
     }
+
+    // poem belongs to user relationship
+    public function hasPoem(){
+       return $this->hasOne('App\Product');
+    }
 }

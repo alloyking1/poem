@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         $userOrders = $this->Orders();
-        $cathegory = Cathegory::all();
+        $cathegory = Cathegory::all();  
         return view('home',compact('cathegory','userOrders'));
     }
 
