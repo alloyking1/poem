@@ -81,17 +81,44 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Poem World
                 </div>
-
+                
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <p>This is where you share all your poems</p>
+                </div>
+            </div>
+
+          
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Read Poems</div>
+
+                            <div class="card-body">
+                                @if (session('status'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
+
+                                <div class="row">
+                                    @foreach ($cathegory as $each)
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <a href="/product/{{ $each->id }}">
+                                                    <p>{{ $each->name }}</p>
+                                                    <p>Description</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
