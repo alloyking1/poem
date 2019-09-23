@@ -142,7 +142,7 @@
             </p>
 
             <!-- Button -->
-            <a href="/" target="_blank" class="btn btn-success lift">
+            <a href="/register" target="_blank" class="btn btn-success lift">
               Register <i class="fe fe-arrow-right"></i>
             </a>
 
