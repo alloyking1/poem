@@ -4,7 +4,7 @@
 
 <!-- WELCOME
 ================================================== -->
-<section class=" margin-b top-section">
+<section class="white-color pad-section">
     <div class="container">  
         <div class="container">
             <div class="row align-items-center">
@@ -29,10 +29,10 @@
                     
                 <!-- Buttons -->
                 <div class="text-center text-md-left">
-                <a href="#" class="btn btn-primary shadow lift mr-1">
+                <a href="/register" class="btn btn-primary shadow lift mr-1">
                     Register <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
                 </a>
-                <a href="#" class="btn btn-primary-soft lift">
+                <a href="/login" class="btn btn-primary-soft lift">
                     Login
                 </a>
                 </div>
@@ -43,7 +43,7 @@
     </div>
 </section>
 
-<section class=" mb-4 ">
+<section class=" mb-4 gray-color pad-section">
     <div class="container">
         <div class="col-12  text-center line-height margin-t">
         
@@ -118,119 +118,240 @@
       </div>
     </div>
 
-</section>
-
-<!-- FAQ
+    
+    <!-- CTA
     ================================================== -->
-    <section class="pt-15 bg-dark">
-      <div class="container pt-8 pt-md-11">
-        <div class="row">
-          <div class="col-12 col-md-6">
+    <section class="py-8 py-md-11 bg-dark">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
             
-            <!-- Item -->
-            <div class="d-flex">
+            <br><br><br><br>
+            <!-- Badge -->
+            <span class="badge badge-pill badge-gray-700-soft mb-4">
+              <span class="h6 font-weight-bold text-uppercase">want to write?</span>
+            </span>
+            <!-- Heading -->
+            <h1 class="display-4 text-white">
+              Join over 2000, other poets.
+            </h1>
 
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-success">
-                <span>?</span>
-              </div>
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-6 mb-md-8">
+              Stop wasting time trying to do it the "right way" and build a site from scratch. Landkit is faster, easier, and you still have complete control.
+            </p>
 
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="text-white">
-                  Can I use Landkit for my clients?
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6 mb-md-8">
-                  Absolutely. The Bootstrap Themes license allows you to build a websites for personal use or for a client. 
-                </p>
-
-              </div>
-
-            </div>
-            
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-success">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="text-white">
-                  Do I get free updates?
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
-                  Yes. We update all of our themes with each Bootstrap update, plus are constantly adding new components, pages, and features to our themes. 
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-          <div class="col-12 col-md-6">
-            
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-success">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="text-white">
-                  Is there a money back guarantee?
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6 mb-md-8">
-                  Yup! Bootstrap Themes come with a satisfaction guarantee. Submit a return and get your money back.
-                </p>
-
-              </div>
-
-            </div>
-            
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-success">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="text-white">
-                  Does it work with Rails? React? Laravel?
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
-                  Yes. Landkit has basic CSS/JS files you can include. If you want to enable deeper customization, you can integrate it into your assets pipeline or build processes.
-                </p>
-
-              </div>
-
-            </div>
+            <!-- Button -->
+            <a href="/" target="_blank" class="btn btn-success lift">
+              Register <i class="fe fe-arrow-right"></i>
+            </a>
 
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
 
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+      </div>
+    </div>
 
+</section>
+
+<!-- FOOTER
+    ================================================== -->
+    <footer class="py-8 py-md-11 bg-gray-200">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+        
+            <!-- Brand -->
+            <img src="custom_assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
+
+            <!-- Text -->
+            <p class="text-gray-700 mb-2">
+              A better way to build.
+            </p>
+
+            <!-- Social -->
+            <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-decoration-none">
+                  <img src="custom_assets/img/instagram.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-decoration-none">
+                  <img src="custom_assets/img/facebook.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-decoration-none">
+                  <img src="custom_assets/img/twitter.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item">
+                <a href="https://landkit.goodthemes.co/#!" class="text-decoration-none">
+                  <img src="custom_assets/img/pinterest.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Products
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Page Builder
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Styleguide
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Services
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+              <li>
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Connect
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Page Builder
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Styleguide
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Legal
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li>
+                <a href="https://landkit.goodthemes.co/#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+
+
+    
+    
 
 @endsection

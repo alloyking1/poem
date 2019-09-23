@@ -31,6 +31,7 @@
     <link href="{{ asset('css/jarallax.css') }}" rel="stylesheet">
     <link href="{{ asset('css/vs2015.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery.fancybox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/theme.min.css') }}" rel="stylesheet">
 
 </head>
 <body>
