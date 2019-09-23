@@ -64,40 +64,31 @@
             <div class="col-md-4">
 
                 <!-- Card -->
-                <div class="card rounded-lg shadow-lg mb-6 mb-md-0 aos-init aos-animate" style="z-index: 1;" data-aos="fade-up">
+                <div class="card mb-6 shadow-light-lg lift lift-lg">
 
                     <!-- Body -->
-                    <div class="card-body py-6 py-md-8">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-xl-9">
-                    
-                            <!-- Badge -->
-                            <div class="text-center mb-5">
-                                <span class="badge badge-pill badge-primary-soft">
-                                <span class="h6 font-weight-bold text-uppercase">{{ $each->name }}</span>
-                                </span>
-                            </div>
+                    <a href="/product/{{ $each->id }}" style="text-decoration:none">
+                        <div class="card-body py-6 py-md-8">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-xl-9">
+                            
+                                    <!-- Badge -->
+                                    <div class="text-center mb-5">
+                                        <span class="badge badge-pill badge-primary-soft">
+                                        <span class="h6 font-weight-bold text-uppercase">{{ $each->name }}</span>
+                                        </span>
+                                    </div>
 
-                            <!-- Price -->
-                            <!-- <div class="d-flex justify-content-center">
-                                <span class="h2 mb-0 mt-2">$</span>
-                                <span class="price display-2 mb-0" data-annual="29" data-monthly="49">29</span>
-                                <span class="h2 align-self-end mb-1">/mo</span>
-                            </div> -->
+                                    <!-- Text -->
+                                    <p class="text-center text-muted mb-6 mb-md-8">
+                                        Landkit is built to make your life easier. 
+                                        Variables, build tooling, documentation, and reusable components.
+                                    </p>
 
-                            <!-- Text -->
-                            <p class="text-center text-muted mb-6 mb-md-8">
-                                Landkit is built to make your life easier. 
-                                Variables, build tooling, documentation, and reusable components.
-                            </p>
-                        
+                                    read more >>>
+                                </div>
+                            </div> <!-- / .row -->
                         </div>
-                    </div> <!-- / .row -->
-                    </div>
-
-                    <!-- Button -->
-                    <a href="/product/{{ $each->id }}" class="card-btn btn btn-block btn-lg btn-primary rounded-bottom">
-                        Continue
                     </a>
 
                 </div>
