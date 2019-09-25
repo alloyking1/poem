@@ -141,7 +141,7 @@
                 <div class="card mb-6 shadow-light-lg lift lift-lg">
 
                     <!-- Body -->
-                    <a href="/product/{{ $each->id }}" style="text-decoration:none">
+                    <a href="/product/{{ $each->id }}" target="_blank" style="text-decoration:none">
                         <div class="card-body py-6 py-md-8">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-xl-9">

@@ -32,6 +32,7 @@ class HomeController extends Controller
         return view('home',compact('cathegory','userOrders'));
     }
 
+    
     public function Orders(){
         $user = Auth::user();
         $orders = $user->hasOrder;

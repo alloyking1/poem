@@ -26,7 +26,7 @@ class ProductsController extends Controller
         $id = $request->id;
         $cathegory = Cathegory::find($id);
         $content = $cathegory->products;
-        return view('user/Product',compact('content'));
+        return view('user/Product',compact('content','cathegory'));
     }
 
 
@@ -37,7 +37,8 @@ class ProductsController extends Controller
      */
     public function SingleProduct(Request $request, $id){
         $id = $request->id;
-        return view('user/singleProduct', compact('id'));
+        $singlePoem = Product::find($id);
+        return view('user/singleProduct', compact('singlePoem', 'id'));
     }
 
     /**

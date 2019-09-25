@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -61,6 +61,44 @@
 
                 </div>
             </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="card card-row shadow-light-lg mb-6">
+        <div class="" style="padding:5%;">
+            <div class="align-items-center">
+                <h1 class="display-4 text-gray">
+                    {{$singlePoem->title}}
+                </h1>
+                <p class="font-size-lg text-muted mb-6 mb-md-8">
+                    {{$singlePoem->content}}
+                </p>
+                <!-- Meta -->
+                <a class="card-meta mt-auto" href="#!">
+
+                    <!-- Divider -->
+                    <hr class="card-meta-divider">
+
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm mr-2">
+                        <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                    <!-- Author -->
+                    <h6 class="text-uppercase text-muted mr-2 mb-0">
+                        Ab Hadley
+                    </h6>
+
+                    <!-- Date -->
+                    <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                        <time datetime="2019-05-02">May 02</time>
+                    </p>
+
+                </a>
+            </div>
+            <!-- {{$singlePoem}} -->
         </div>
     </div>
 </div>
