@@ -74,18 +74,19 @@
                             <div class="form-group row">
                                 <div class="col-md-12">
                 
-                                <select class=" form-control" name="cathegory" id="cathegory" value="{{ old('cathegory') }}">
-                                    <option value="1">select Cathegory</option>
-                                    <option value="1">Love Poem</option>
-                                    <option value="2">Tech Poem</option>
-                                </select>
+                                    <select class=" form-control" placeholder="cathegory" name="cathegory" id="cathegory" value="{{ old('cathegory') }}">
+                                        <option value="">select</option>
+                                        @foreach ($cathegory as $each)
+                                            <option value="{{$each->id}}">{{$each->name}}</option>
+                                        @endforeach
+                                    </select>
 
-                                @if ($errors->has('country'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('country') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                                    @if ($errors->has('country'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('country') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
 
                             <div class="form-group row">
@@ -155,8 +156,8 @@
 
                                     <!-- Text -->
                                     <p class="text-center text-muted mb-6 mb-md-8">
-                                        Landkit is built to make your life easier. 
-                                        Variables, build tooling, documentation, and reusable components.
+                                    
+                                        {{ str_limit($each->description, $limit= 100) }}
                                     </p>
 
                                     read more >>>

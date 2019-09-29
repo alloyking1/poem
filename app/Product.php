@@ -9,12 +9,16 @@ class Product extends Model
 {
     //relationship with cathegory
     public function product_cathegory(){
-        $this->belongsTo('App\Cathegory', 'cathegory_id');
+        return $this->belongsTo('App\Cathegory', 'cathegory_id');
     }
 
     //relationship with user
-    public function user_poem(){
-        $this->belongsTo('App\User', 'user_id');
+    public function poem_writer(){
+        return $this->belongsTo('App\User', 'user_id');
     }
 
+    // post like relationship
+    public function get_post_like(){
+        return $this->hasMany('App\Like', 'post_id');
+    }
 }

@@ -65,9 +65,9 @@
     </div>
 </div> -->
 
-<div class="container">
+<div class="container pad-section">
     <div class="card card-row shadow-light-lg mb-6">
-        <div class="" style="padding:5%;">
+        <div class="" style="padding:10%;">
             <div class="align-items-center">
                 <h1 class="display-4 text-gray">
                     {{$singlePoem->title}}
@@ -76,24 +76,24 @@
                     {{$singlePoem->content}}
                 </p>
                 <!-- Meta -->
-                <a class="card-meta mt-auto" href="#!">
+                <a class="card-meta mt-auto" href="/user/profile">
 
                     <!-- Divider -->
                     <hr class="card-meta-divider">
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm mr-2">
-                        <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                        <img src="{{ asset('storage/storage/profile_pix/'.$PoemWriter->profile_pix) }}" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                     <!-- Author -->
                     <h6 class="text-uppercase text-muted mr-2 mb-0">
-                        Ab Hadley
+                        {{$PoemWriter->name}}
                     </h6>
 
                     <!-- Date -->
                     <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                        <time datetime="2019-05-02">May 02</time>
+                        <time datetime="2019-05-02">{{$singlePoem->created_at}}</time>
                     </p>
 
                 </a>

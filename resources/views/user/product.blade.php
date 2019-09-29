@@ -6,6 +6,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-7 text-center">
+            <div class="thumbnail round">
+            </div>
             
             <!-- Heading -->
             <h1 class="display-2 font-weight-bold text-white">
@@ -14,7 +16,7 @@
 
             <!-- Text -->
             <p class="lead mb-0 text-white-75">
-                Keep up to date with what we're working on! Landkit is an ever evolving theme with regular updates. 
+                {{$cathegory->description}}
             </p>
 
             </div>
@@ -60,15 +62,20 @@
                                     <div class="col-12 col-xl-9">
                                 
                                         <!-- Badge -->
-                                        <div class="text-center mb-5">
-                                            <span class="badge badge-pill badge-primary-soft">
-                                            <span class="h6 font-weight-bold text-uppercase">{{ $each->title }}</span>
-                                            </span>
+                                        <div class="text-center mb-5 row">
+                                            <div class="col-12 badge badge-pill badge-primary-soft">
+                                                <p class="col-12 h6 font-weight-bold text-uppercase">
+                                                    {{$each->title}}
+                                                </p>
+                                            </div>
                                         </div>
 
                                         <!-- Text -->
                                         <p class="text-center text-muted mb-6 mb-md-8">
-                                            {{ $each->content }}
+                                            <!-- {{ $each->content }} -->
+                                            {{ str_limit($each->content, $limit = 100) }}
+                                            <br><br>
+                                            read more >>>
                                         </p>
                                     </div>
                                 </div> <!-- / .row -->
@@ -83,17 +90,17 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-sm mr-2">
-                                <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                                <img src="{{ asset('storage/storage/profile_pix/') }}" alt="..." class="avatar-img rounded-circle">
                             </div>
 
                             <!-- Author -->
                             <h6 class="text-uppercase text-muted mr-2 mb-0">
-                                Ab Hadley
+                                
                             </h6>
 
                             <!-- Date -->
                             <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                                <time datetime="2019-05-02">May 02</time>
+                                <time datetime="2019-05-02">{{(date($each->created_at))}}</time>
                             </p>
 
                         </a>

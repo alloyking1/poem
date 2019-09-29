@@ -20,6 +20,8 @@ Route::prefix('/')->group(function(){
 // auth user route
 Route::prefix('user')->group(function(){
     Route::post('/poem/upload', 'ProductsController@PoemUpload');
+    Route::get('/profile', 'ProfileController@Index');
+    Route::post('/upload/profile_pix', 'ProfileController@UploadProfilePix');
 });
 
 // admin routes

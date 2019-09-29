@@ -7,16 +7,19 @@
     margin-bottom:10% !important;
 }
 
-.line-height{
-    /* line-height: 55px; */
-} 
+.limit{
+    width:100%;
+    word-wrap: break-word;
+    /* border-radius: 12px;
+    padding-top: 5%; */
+}
 
 .gray-color{
    background-color: #f1f4f8!important;
 }
 
 .white-color{
-   background-color: white;!important;
+   background-color: white!important;
 }
 
 .pad-section{

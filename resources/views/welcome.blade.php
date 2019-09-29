@@ -81,8 +81,7 @@
 
                                     <!-- Text -->
                                     <p class="text-center text-muted mb-6 mb-md-8">
-                                        Landkit is built to make your life easier. 
-                                        Variables, build tooling, documentation, and reusable components.
+                                      {{ str_limit($each->content, $limit = 100) }}
                                     </p>
 
                                     read more >>>

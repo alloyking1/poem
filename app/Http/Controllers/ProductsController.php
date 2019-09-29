@@ -7,6 +7,7 @@ use App\Traits\HelperTraits;
 use App\Product;
 use App\Cathegory;
 use App\Order;
+use App\User;
 use Auth;
 
 class ProductsController extends Controller
@@ -26,19 +27,44 @@ class ProductsController extends Controller
         $id = $request->id;
         $cathegory = Cathegory::find($id);
         $content = $cathegory->products;
+        // $PoemWriter = $cathegory->products->user_poem; //get user details from relationship
+        // dd($PoemWriter)
         return view('user/Product',compact('content','cathegory'));
     }
 
 
     /**
-     * gets all cathegories of poems available
+     * Finds a single poem from product table
      * @param $request $id
      * @return 
      */
     public function SingleProduct(Request $request, $id){
         $id = $request->id;
         $singlePoem = Product::find($id);
-        return view('user/singleProduct', compact('singlePoem', 'id'));
+        $PoemWriter = $singlePoem->poem_writer; //get user details from relationship
+        return view('user/singleProduct', compact('singlePoem','id','PoemWriter'));
+    }
+
+    /**
+     * handles upload of poem cover photo
+     * @param $request 
+     * @return path to image
+     */
+    public function PoemCoverPhotoUpload(Request $request){
+        //get imge name with ext
+        $filenameWithExt = $request->file('profile_pix')->getClientOriginalName();
+        //jxt file name 
+        $fileName = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        //jxt ext
+        $fileExtention = $request->file('profile_pix')->getClientOriginalExtension();
+        //add unique to img
+        $fileNameToStore = $fileName.'_'.time().'.'.$fileExtention;
+
+        // dd($fileName);
+        //store img
+        $path = $request->file('profile_pix')->storeAs('public/storage/profile_pix', $fileNameToStore);
+        
+        return $fileNameToStore;
     }
 
     /**
@@ -49,6 +75,7 @@ class ProductsController extends Controller
     public function PoemUpload(Request $request){
         $order_id =  mt_rand(100000, 999999);
         $user_id = Auth::user()->id;
+        // $ImgStorePath = $this->PoemCoverPhotoUpload($request);
 
         if($this->ValidateOrder($request)){
 
@@ -62,6 +89,44 @@ class ProductsController extends Controller
             return redirect('/home');
         }
         
+    }
+
+    /**
+     * check if user likes poem previously
+     * @param poem $id
+     * @return boolean
+     */
+    public function isLikedByMe($id)
+    {
+        $post = Post::findOrFail($id)->first();
+        if (Like::whereUserId(Auth::id())->wherePostId($post->id)->exists()){
+            return 'true';
+        }
+        return 'false';
+    }
+
+
+    /**
+     * Implement like logic
+     * @param $post request
+     * @return 
+     */
+    public function like(Post $post)
+    {
+        $existing_like = Like::withTrashed()->wherePostId($post->id)->whereUserId(Auth::id())->first();
+
+        if (is_null($existing_like)) {
+            Like::create([
+                'post_id' => $post->id,
+                'user_id' => Auth::id()
+            ]);
+        } else {
+            if (is_null($existing_like->deleted_at)) {
+                $existing_like->delete();
+            } else {
+                $existing_like->restore();
+            }
+        }
     }
 
 }

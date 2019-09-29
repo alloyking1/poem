@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'profile_pix',
     ];
 
     /**
@@ -42,7 +42,8 @@ class User extends Authenticatable
     }
 
     // poem belongs to user relationship
-    public function hasPoem(){
-       return $this->hasOne('App\Product');
+    public function UserPoems(){
+       return $this->hasMany('App\Product');
     }
+
 }
