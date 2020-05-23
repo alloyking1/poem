@@ -11,10 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
 
-    {{--  flutterwave payment script  --}}
-    <script src="{{ asset('js/paymentFlutter.js') }}"></script>
+    <!--  flutterwave payment script  -->
+    <script src="{{ asset('js/like.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,14 +23,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/feather.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/flickity.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/flickity-fade.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jarallax.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/vs2015.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jquery.fancybox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/theme.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom_assets/css/feather.css') }}" rel="stylesheet">
+    <!--<link href="{{ asset('css/custom_assets/css/flickity.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom_assets/css/flickity-fade.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom_assets/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom_assets/jarallax.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom_assets/vs2015.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom_assets/jquery.fancybox.min.css') }}" rel="stylesheet">--->
+    <link href="{{ asset('css/custom_assets/css/theme.min.css') }}" rel="stylesheet">
 
 </head>
 <body>

@@ -18,7 +18,7 @@ class Product extends Model
     }
 
     // post like relationship
-    public function get_post_like(){
-        return $this->hasMany('App\Like', 'post_id');
+    public function likes(){
+        return $this->belongsTo('AppLike');
     }
 }

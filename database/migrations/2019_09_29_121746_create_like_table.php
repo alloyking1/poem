@@ -17,7 +17,6 @@ class CreateLikeTable extends Migration
             $table->bigIncrements('id');
             $table->integer('post_id');
             $table->integer('user_id');
-            $table->softDeletes();
             $table->timestamps();
         });
     }

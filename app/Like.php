@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Like extends Model
 {
     //
-    public function get_like(){
-        return $this->
+    public function user(){
+        return $this->belongsTo('AppUser');
+    }
+
+    public function post(){
+        return $this->belongsTo('AppPost');
     }
 }

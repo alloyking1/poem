@@ -8,6 +8,7 @@ use App\Product;
 use App\Cathegory;
 use App\Order;
 use App\User;
+use App\Like;
 use Auth;
 
 class ProductsController extends Controller
@@ -113,20 +114,27 @@ class ProductsController extends Controller
      */
     public function like(Post $post)
     {
-        $existing_like = Like::withTrashed()->wherePostId($post->id)->whereUserId(Auth::id())->first();
+        // $existing_like = Like::withTrashed()->wherePostId($post->id)->whereUserId(Auth::id())->first();
 
-        if (is_null($existing_like)) {
-            Like::create([
-                'post_id' => $post->id,
-                'user_id' => Auth::id()
-            ]);
-        } else {
-            if (is_null($existing_like->deleted_at)) {
-                $existing_like->delete();
-            } else {
-                $existing_like->restore();
-            }
-        }
+        // if (is_null($existing_like)) {
+        //     Like::create([
+        //         'post_id' => $post->id,
+        //         'user_id' => Auth::id()
+        //     ]);
+        // } else {
+        //     if (is_null($existing_like->deleted_at)) {
+        //         $existing_like->delete();
+        //     } else {
+        //         $existing_like->restore();
+        //     }
+        // }
+
+        $like = new Like;
+        $like->user_id = $user_id;
+        $like->poem_id = $poem_id;
+        $like->save();
+
+        return true;
     }
 
 }

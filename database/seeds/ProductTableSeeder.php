@@ -15,10 +15,7 @@ class ProductTableSeeder extends Seeder
         //
         DB::table('products')->insert([
             'name' => Str::random(10),
-            'description' => Str::random(10).'@gmail.com',
-            'price' => int::random(10),
-            'cathegory' => App/Cathegory::all(),
-            'password' => bcrypt('password'),
+            'description' => Str::random(30).'@gmail.com',
         ]);
     }
 }
