@@ -9,6 +9,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -111,215 +113,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      category: {}
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.fetCategory();
+  },
+  methods: {
+    fetCategory: function fetCategory() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/user/category').then(function (res) {
+        _this.category = res.data;
+        console.log(_this.category);
+      });
+    }
   }
 });
 
@@ -341,83 +153,92 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", {}, [
-    _c("div", { staticClass: "position-relative" }, [
-      _c(
-        "section",
-        { staticClass: "section section-lg section-shaped pb-250" },
-        [
-          _c("div", { attrs: { id: "particles-js" } }),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._m(1),
+    _c("div", { staticClass: "wrapper" }, [
+      _c("div", { staticClass: "section section-hero section-shaped" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "separator separator-bottom separator-skew zindex-100"
+          },
+          [
+            _c(
+              "svg",
+              {
+                attrs: {
+                  x: "0",
+                  y: "0",
+                  viewBox: "0 0 2560 100",
+                  preserveAspectRatio: "none",
+                  version: "1.1",
+                  xmlns: "http://www.w3.org/2000/svg"
+                }
+              },
+              [
+                _c("polygon", {
+                  staticClass: "fill-white",
+                  attrs: { points: "2560 0 2560 100 0 100" }
+                })
+              ]
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _c("div", { staticClass: "section features-1" }, [
+        _c("div", { staticClass: "container" }, [
+          _vm._m(3),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "separator separator-bottom separator-skew" },
-            [
-              _c(
-                "svg",
-                {
-                  attrs: {
-                    x: "0",
-                    y: "0",
-                    viewBox: "0 0 2560 100",
-                    preserveAspectRatio: "none",
-                    version: "1.1",
-                    xmlns: "http://www.w3.org/2000/svg"
-                  }
-                },
+            { staticClass: "row" },
+            _vm._l(_vm.category, function(each) {
+              return _c(
+                "div",
+                { key: _vm.category.index, staticClass: "col-md-4" },
                 [
-                  _c("polygon", {
-                    staticClass: "fill-white",
-                    attrs: { points: "2560 0 2560 100 0 100" }
-                  })
+                  _c(
+                    "div",
+                    { staticClass: "info" },
+                    [
+                      _vm._m(4, true),
+                      _vm._v(" "),
+                      _c(
+                        "h6",
+                        {
+                          staticClass: "info-title text-uppercase text-primary"
+                        },
+                        [_vm._v(_vm._s(each.name))]
+                      ),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "description opacity-8" }, [
+                        _vm._v(_vm._s(each.description))
+                      ]),
+                      _vm._v(" "),
+                      _c("router-link", [
+                        _vm._v("See posts\n                  "),
+                        _c("i", {
+                          staticClass: "ni ni-bold-right text-primary"
+                        })
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("br")
                 ]
               )
-            ]
+            }),
+            0
           )
-        ]
-      )
-    ]),
-    _vm._v(" "),
-    _vm._m(2),
-    _vm._v(" "),
-    _vm._m(3),
-    _vm._v(" "),
-    _vm._m(4),
-    _vm._v(" "),
-    _c("section", { staticClass: "section section-lg bg-gradient-default" }, [
-      _vm._m(5),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "separator separator-bottom separator-skew zindex-100" },
-        [
-          _c(
-            "svg",
-            {
-              attrs: {
-                x: "0",
-                y: "0",
-                viewBox: "0 0 2560 100",
-                preserveAspectRatio: "none",
-                version: "1.1",
-                xmlns: "http://www.w3.org/2000/svg"
-              }
-            },
-            [
-              _c("polygon", {
-                staticClass: "fill-white",
-                attrs: { points: "2560 0 2560 100 0 100" }
-              })
-            ]
-          )
-        ]
-      )
-    ]),
-    _vm._v(" "),
-    _vm._m(6)
+        ])
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -425,525 +246,167 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "shape shape-style-1 shape-default" }, [
-      _c("span"),
+    return _c("div", { staticClass: "shape shape-style-3 shape-default" }, [
+      _c("span", { staticClass: "span-150" }),
       _vm._v(" "),
-      _c("span"),
+      _c("span", { staticClass: "span-50" }),
       _vm._v(" "),
-      _c("span"),
+      _c("span", { staticClass: "span-50" }),
       _vm._v(" "),
-      _c("span"),
+      _c("span", { staticClass: "span-75" }),
       _vm._v(" "),
-      _c("span"),
+      _c("span", { staticClass: "span-100" }),
       _vm._v(" "),
-      _c("span"),
+      _c("span", { staticClass: "span-75" }),
       _vm._v(" "),
-      _c("span"),
+      _c("span", { staticClass: "span-50" }),
       _vm._v(" "),
-      _c("span"),
+      _c("span", { staticClass: "span-100" }),
       _vm._v(" "),
-      _c("span")
+      _c("span", { staticClass: "span-50" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-100" })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container py-lg-md d-flex" }, [
-      _c("div", { staticClass: "col px-0" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c("h1", { staticClass: "display-3  text-white" }, [
-              _vm._v("A beautiful Design System"),
-              _c("span", [_vm._v("completed with examples")])
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "lead  text-white" }, [
-              _vm._v(
-                "The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go."
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "btn-wrapper" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-info btn-icon mb-3 mb-sm-0",
-                  attrs: {
-                    href:
-                      "https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
-                  }
-                },
-                [
-                  _c("span", { staticClass: "btn-inner--icon" }, [
-                    _c("i", { staticClass: "fa fa-code" })
+    return _c("div", { staticClass: "page-header" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "container shape-container d-flex align-items-center py-lg"
+        },
+        [
+          _c("div", { staticClass: "col px-0" }, [
+            _c(
+              "div",
+              { staticClass: "row align-items-center justify-content-center" },
+              [
+                _c("div", { staticClass: "col-lg-6 text-center" }, [
+                  _c("h1", { staticClass: "text-white display-1" }, [
+                    _vm._v("People stories")
                   ]),
                   _vm._v(" "),
-                  _c("span", { staticClass: "btn-inner--text" }, [
-                    _vm._v("Login")
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-white btn-icon mb-3 mb-sm-0",
-                  attrs: {
-                    href:
-                      "https://www.creative-tim.com/product/argon-design-system"
-                  }
-                },
-                [
-                  _c("span", { staticClass: "btn-inner--icon" }, [
-                    _c("i", { staticClass: "ni ni-cloud-download-95" })
-                  ]),
+                  _c(
+                    "h2",
+                    { staticClass: "display-4 font-weight-normal text-white" },
+                    [_vm._v("The time is right now!")]
+                  ),
                   _vm._v(" "),
-                  _c("span", { staticClass: "btn-inner--text" }, [
-                    _vm._v("Sign up")
-                  ])
-                ]
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "section section-lg pt-lg-0 " }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "row row-grid" }, [
-              _c("div", { staticClass: "col-lg-4" }, [
-                _c(
-                  "div",
-                  { staticClass: "card card-lift--hover shadow border-0" },
-                  [
-                    _c("div", { staticClass: "card-body py-5" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "icon icon-shape icon-shape-primary rounded-circle mb-4"
-                        },
-                        [_c("i", { staticClass: "ni ni-check-bold" })]
-                      ),
-                      _vm._v(" "),
-                      _c("h6", { staticClass: "text-primary text-uppercase" }, [
-                        _vm._v("Download Argon")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "description mt-3" }, [
-                        _vm._v(
-                          "Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features."
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-primary" },
-                          [_vm._v("design")]
-                        ),
+                  _c("div", { staticClass: "btn-wrapper mt-4" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-warning btn-icon mt-3 mb-sm-0",
+                        attrs: {
+                          href:
+                            "https://www.creative-tim.com/product/argon-design-system"
+                        }
+                      },
+                      [
+                        _c("span", { staticClass: "btn-inner--icon" }, [
+                          _c("i", { staticClass: "ni ni-button-play" })
+                        ]),
                         _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-primary" },
-                          [_vm._v("system")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-primary" },
-                          [_vm._v("creative")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-primary mt-4",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Learn more")]
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-4" }, [
-                _c(
-                  "div",
-                  { staticClass: "card card-lift--hover shadow border-0" },
-                  [
-                    _c("div", { staticClass: "card-body py-5" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "icon icon-shape icon-shape-success rounded-circle mb-4"
-                        },
-                        [_c("i", { staticClass: "ni ni-istanbul" })]
-                      ),
-                      _vm._v(" "),
-                      _c("h6", { staticClass: "text-success text-uppercase" }, [
-                        _vm._v("Build Something")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "description mt-3" }, [
-                        _vm._v(
-                          "Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features."
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-success" },
-                          [_vm._v("business")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-success" },
-                          [_vm._v("vision")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-success" },
-                          [_vm._v("success")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-success mt-4",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Learn more")]
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-4" }, [
-                _c(
-                  "div",
-                  { staticClass: "card card-lift--hover shadow border-0" },
-                  [
-                    _c("div", { staticClass: "card-body py-5" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "icon icon-shape icon-shape-warning rounded-circle mb-4"
-                        },
-                        [_c("i", { staticClass: "ni ni-planet" })]
-                      ),
-                      _vm._v(" "),
-                      _c("h6", { staticClass: "text-warning text-uppercase" }, [
-                        _vm._v("Prepare Launch")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "description mt-3" }, [
-                        _vm._v(
-                          "Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features."
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-warning" },
-                          [_vm._v("marketing")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-warning" },
-                          [_vm._v("product")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "badge badge-pill badge-warning" },
-                          [_vm._v("launch")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-warning mt-4",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Learn more")]
-                      )
-                    ])
-                  ]
-                )
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "section section-lg" }, [
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "div",
-          { staticClass: "row justify-content-center text-center mb-lg" },
-          [
-            _c("div", { staticClass: "col-lg-8" }, [
-              _c("h2", { staticClass: "display-3" }, [
-                _vm._v("The amazing Team")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "lead text-muted" }, [
-                _vm._v(
-                  "According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record maximum."
-                )
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
-            _c("div", { staticClass: "px-4" }, [
-              _c("div", { staticClass: "pt-4 text-center" }, [
-                _c("h5", { staticClass: "title" }, [
-                  _c("span", { staticClass: "d-block mb-1" }, [
-                    _vm._v("Ryan Tompson")
-                  ]),
-                  _vm._v(" "),
-                  _c("small", { staticClass: "h6 text-muted" }, [
-                    _vm._v("Web Developer")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-3" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-warning btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-twitter" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-warning btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-facebook" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-warning btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-dribbble" })]
-                  )
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
-            _c("div", { staticClass: "px-4" }, [
-              _c("div", { staticClass: "pt-4 text-center" }, [
-                _c("h5", { staticClass: "title" }, [
-                  _c("span", { staticClass: "d-block mb-1" }, [
-                    _vm._v("Romina Hadid")
-                  ]),
-                  _vm._v(" "),
-                  _c("small", { staticClass: "h6 text-muted" }, [
-                    _vm._v("Marketing Strategist")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-3" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-primary btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-twitter" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-primary btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-facebook" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-primary btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-dribbble" })]
-                  )
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
-            _c("div", { staticClass: "px-4" }, [
-              _c("div", { staticClass: "pt-4 text-center" }, [
-                _c("h5", { staticClass: "title" }, [
-                  _c("span", { staticClass: "d-block mb-1" }, [
-                    _vm._v("Alexander Smith")
-                  ]),
-                  _vm._v(" "),
-                  _c("small", { staticClass: "h6 text-muted" }, [
-                    _vm._v("UI/UX Designer")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-3" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-info btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-twitter" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-info btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-facebook" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-info btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-dribbble" })]
-                  )
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
-            _c("div", { staticClass: "px-4" }, [
-              _c("div", { staticClass: "pt-4 text-center" }, [
-                _c("h5", { staticClass: "title" }, [
-                  _c("span", { staticClass: "d-block mb-1" }, [
-                    _vm._v("John Doe")
-                  ]),
-                  _vm._v(" "),
-                  _c("small", { staticClass: "h6 text-muted" }, [
-                    _vm._v("Founder and CEO")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-3" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-success btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-twitter" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-success btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-facebook" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "btn btn-success btn-icon-only rounded-circle",
-                      attrs: { href: "#" }
-                    },
-                    [_c("i", { staticClass: "fa fa-dribbble" })]
-                  )
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "section section-lg pt-0" }, [
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "div",
-          { staticClass: "card bg-gradient-warning shadow-lg border-0" },
-          [
-            _c("div", { staticClass: "p-5" }, [
-              _c("div", { staticClass: "row align-items-center" }, [
-                _c("div", { staticClass: "col-lg-8" }, [
-                  _c("h3", { staticClass: "text-white" }, [
-                    _vm._v("We made website building easier for you.")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "lead text-white mt-3" }, [
-                    _vm._v(
-                      "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture."
+                        _c("span", { staticClass: "btn-inner--text" }, [
+                          _vm._v("Play more")
+                        ])
+                      ]
                     )
                   ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-3 ml-lg-auto" })
-              ])
-            ])
-          ]
-        )
+                ])
+              ]
+            )
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "section features-6" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row align-items-center" }, [
+          _c("div", { staticClass: "col-lg-6" }, [
+            _c(
+              "div",
+              { staticClass: "info info-horizontal info-hover-primary" },
+              [
+                _c("div", { staticClass: "description pl-4" }, [
+                  _c("h5", { staticClass: "title" }, [
+                    _vm._v("For Developers")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { staticClass: "text-info", attrs: { href: "#" } }, [
+                    _vm._v("Learn more")
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "info info-horizontal info-hover-primary mt-5" },
+              [
+                _c("div", { staticClass: "description pl-4" }, [
+                  _c("h5", { staticClass: "title" }, [_vm._v("For Designers")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { staticClass: "text-info", attrs: { href: "#" } }, [
+                    _vm._v("Learn more")
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "info info-horizontal info-hover-primary mt-5" },
+              [
+                _c("div", { staticClass: "description pl-4" }, [
+                  _c("h5", { staticClass: "title" }, [_vm._v("For Beginners")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "That’s what I do. That’s what I’m here for. Don’t be afraid to be wrong because you can’t learn anything from a compliment. If everything I did failed - which it doesn't."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { staticClass: "text-info", attrs: { href: "#" } }, [
+                    _vm._v("Learn more")
+                  ])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-10 mx-md-auto" }, [
+            _c("img", {
+              staticClass: "ml-lg-5",
+              attrs: {
+                src:
+                  "https://demos.creative-tim.com/argon-design-system/assets/img/ill/ill.png",
+                width: "100%"
+              }
+            })
+          ])
+        ])
       ])
     ])
   },
@@ -951,81 +414,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container pt-lg pb-300" }, [
-      _c("div", { staticClass: "row text-center justify-content-center" }, [
-        _c("div", { staticClass: "col-lg-10" }, [
-          _c("h2", { staticClass: "display-3 text-white" }, [
-            _vm._v("Build something")
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "lead text-white" }, [
-            _vm._v(
-              "According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice."
-            )
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row row-grid mt-5" }, [
-        _c("div", { staticClass: "col-lg-4" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary"
-            },
-            [_c("i", { staticClass: "ni ni-settings text-primary" })]
-          ),
-          _vm._v(" "),
-          _c("h5", { staticClass: "text-white mt-3" }, [
-            _vm._v("Building tools")
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-white mt-3" }, [
-            _vm._v(
-              "Some quick example text to build on the card title and make up the bulk of the card's content."
-            )
-          ])
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-8 mx-auto text-center" }, [
+        _c("span", { staticClass: "badge badge-primary badge-pill mb-3" }, [
+          _vm._v("Insight")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary"
-            },
-            [_c("i", { staticClass: "ni ni-ruler-pencil text-primary" })]
-          ),
-          _vm._v(" "),
-          _c("h5", { staticClass: "text-white mt-3" }, [
-            _vm._v("Grow your market")
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-white mt-3" }, [
-            _vm._v(
-              "Some quick example text to build on the card title and make up the bulk of the card's content."
-            )
-          ])
-        ]),
+        _c("h3", { staticClass: "display-3" }, [_vm._v("Chategories")]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary"
-            },
-            [_c("i", { staticClass: "ni ni-atom text-primary" })]
-          ),
-          _vm._v(" "),
-          _c("h5", { staticClass: "text-white mt-3" }, [_vm._v("Launch time")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-white mt-3" }, [
-            _vm._v(
-              "Some quick example text to build on the card title and make up the bulk of the card's content."
-            )
-          ])
+        _c("p", { staticClass: "lead" }, [
+          _vm._v(
+            "The time is now for it to be okay to be great. For being a bright color. For standing out."
+          )
         ])
       ])
     ])
@@ -1035,89 +435,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "section",
-      { staticClass: "section section-lg pt-lg-0 section-contact-us" },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row justify-content-center mt--300" }, [
-            _c("div", { staticClass: "col-lg-8" }, [
-              _c("div", { staticClass: "card bg-gradient-secondary shadow" }, [
-                _c("div", { staticClass: "card-body p-lg-5" }, [
-                  _c("h4", { staticClass: "mb-1" }, [
-                    _vm._v("Want to work with us?")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "mt-0" }, [
-                    _vm._v("Your project is very important to us.")
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group mt-5" }, [
-                    _c(
-                      "div",
-                      { staticClass: "input-group input-group-alternative" },
-                      [
-                        _c("div", { staticClass: "input-group-prepend" }, [
-                          _c("span", { staticClass: "input-group-text" }, [
-                            _c("i", { staticClass: "ni ni-user-run" })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: { placeholder: "Your name", type: "text" }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c(
-                      "div",
-                      { staticClass: "input-group input-group-alternative" },
-                      [
-                        _c("div", { staticClass: "input-group-prepend" }, [
-                          _c("span", { staticClass: "input-group-text" }, [
-                            _c("i", { staticClass: "ni ni-email-83" })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: { placeholder: "Email address", type: "email" }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group mb-4" }, [
-                    _c("textarea", {
-                      staticClass: "form-control form-control-alternative",
-                      attrs: {
-                        name: "name",
-                        rows: "4",
-                        cols: "80",
-                        placeholder: "Type a message..."
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "btn btn-default btn-round btn-block btn-lg",
-                        attrs: { type: "button" }
-                      },
-                      [_vm._v("Send Message")]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]
+      "div",
+      {
+        staticClass:
+          "icon icon-lg icon-shape icon-shape-primary shadow rounded-circle"
+      },
+      [_c("i", { staticClass: "ni ni-settings-gear-65" })]
     )
   }
 ]

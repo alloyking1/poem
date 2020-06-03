@@ -21,3 +21,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('like')->group(function(){
     Route::post('/user', 'ProductController@like');
 });
+
+
+Route::prefix('user')->group(function (){
+    Route::get('/category', 'LandingController@category');
+    // Route::get('/product/{id?}', 'ProductsController@Allproduct');
+    // Route::get('/product/single/{id?}', 'ProductsController@SingleProduct');
+    // Route::post('/order/gig/{id?}', 'OrderController@OrderProduct');
+});

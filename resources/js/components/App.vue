@@ -1,15 +1,18 @@
 <template>
     <div>
-        <nav></nav>
+        <Nav/>
         <router-view></router-view>
+        <Footer/>
     </div>
 </template>
 
 <script>
-import nav from './Nav.vue'
+import Nav from './Nav.vue'
+import Footer from './Footer.vue'
 export default {
     components:{
-        nav
+        Nav,
+        Footer
     }
 }
 </script>

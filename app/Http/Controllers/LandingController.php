@@ -8,12 +8,17 @@ use App\Cathegory;
 class LandingController extends Controller
 {
     /**
-     * handles all actions of the landing page
+     * Displays landing page template for vue.js
      * 
      */
 
     public function index(){
         $cathegory = Cathegory::all(); 
         return view('welcome',compact('cathegory'));
+    }
+
+    public function category(){
+        $cathegory = Cathegory::all(); 
+        return response()->json($cathegory, 200);
     }
 }
