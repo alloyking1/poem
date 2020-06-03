@@ -20,17 +20,17 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+    <!-- <link href="{{ asset('css/custom.css') }}" rel="stylesheet"> -->
 
-    <link href="{{ asset('css/custom_assets/css/feather.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/custom_assets/css/feather.css') }}" rel="stylesheet"> -->
     <!--<link href="{{ asset('css/custom_assets/css/flickity.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom_assets/css/flickity-fade.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom_assets/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom_assets/jarallax.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom_assets/vs2015.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom_assets/jquery.fancybox.min.css') }}" rel="stylesheet">--->
-    <link href="{{ asset('css/custom_assets/css/theme.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/custom_assets/css/theme.min.css') }}" rel="stylesheet"> -->
 
 </head>
 <body>
