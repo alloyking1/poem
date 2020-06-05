@@ -87,7 +87,7 @@
                 </div>
                 <h6 class="info-title text-uppercase text-primary">{{each.name}}</h6>
                 <p class="description opacity-8">{{each.description}}</p>
-                <router-link>See posts
+                <router-link :to="{ path: '/category/post/'+each.id+'/'+each.name}">See posts
                   <i class="ni ni-bold-right text-primary"></i>
                 </router-link>
               </div>

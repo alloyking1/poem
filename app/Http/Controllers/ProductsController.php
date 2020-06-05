@@ -43,7 +43,8 @@ class ProductsController extends Controller
         $id = $request->id;
         $singlePoem = Product::find($id);
         $PoemWriter = $singlePoem->poem_writer; //get user details from relationship
-        return view('user/singleProduct', compact('singlePoem','id','PoemWriter'));
+        return response()->json($singlePoem, 200);
+        // return view('user/singleProduct', compact('singlePoem','id','PoemWriter'));
     }
 
     /**

@@ -6,9 +6,8 @@ let router = new VueRouter({
     // mode: 'history',
     routes:[
         {path:'/',  name:'Landing', component: () =>import('./components/Landing')},
-        // {path:`/character`,  name:'Character', component: () =>import('./components/Character')},
-        // {path:`/post/comment/:id`,  name:'singlePost', component: () =>import('./components/Single')},
-        
+        {path:`/category/post/:id/:name`,  name:'categoryPost', component: () =>import('./components/CategoryPost')},   
+        {path:`/category/single/post/:postId/`,  name:'singlePost', component: () =>import('./components/SinglePost')},   
     ]
 });
 

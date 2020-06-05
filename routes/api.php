@@ -25,7 +25,6 @@ Route::prefix('like')->group(function(){
 
 Route::prefix('user')->group(function (){
     Route::get('/category', 'LandingController@category');
-    // Route::get('/product/{id?}', 'ProductsController@Allproduct');
-    // Route::get('/product/single/{id?}', 'ProductsController@SingleProduct');
-    // Route::post('/order/gig/{id?}', 'OrderController@OrderProduct');
+    Route::get('/category/post/{id?}', 'LandingController@categoryPost');
+    Route::get('/category/single/post/{id?}', 'LandingController@SinglePost');
 });
