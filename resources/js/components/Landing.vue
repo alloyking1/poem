@@ -119,7 +119,6 @@
         axios.get('/api/user/category')
         .then(res => {
           this.category = res.data
-          console.log(this.category)
         })
       }
     }

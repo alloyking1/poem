@@ -7,30 +7,22 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'mywriterfamily') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+    <!-- Argon CSS -->
+    <link type="text/css" href="{{ asset('assets/css/argon.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('assets/vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('assets/particles/css.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
-    <!--  flutterwave payment script  -->
-    <script src="{{ asset('js/like.js') }}"></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-    <!-- Styles -->
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-    <!-- <link href="{{ asset('css/custom.css') }}" rel="stylesheet"> -->
-
-    <!-- <link href="{{ asset('css/custom_assets/css/feather.css') }}" rel="stylesheet"> -->
-    <!--<link href="{{ asset('css/custom_assets/css/flickity.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom_assets/css/flickity-fade.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom_assets/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom_assets/jarallax.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom_assets/vs2015.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom_assets/jquery.fancybox.min.css') }}" rel="stylesheet">--->
-    <!-- <link href="{{ asset('css/custom_assets/css/theme.min.css') }}" rel="stylesheet"> -->
 
 </head>
 <body>
@@ -89,7 +81,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>

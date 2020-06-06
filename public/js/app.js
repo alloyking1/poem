@@ -2044,6 +2044,127 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Nav.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Nav.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      categoryNav: {}
+    };
+  },
+  created: function created() {
+    this.fetch();
+  },
+  methods: {
+    fetch: function fetch() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/user/category').then(function (res) {
+        _this.categoryNav = res.data;
+        console.log(_this.categoryNav);
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -37812,476 +37933,279 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "nav",
+      {
+        staticClass:
+          "navbar navbar-main navbar-expand-lg navbar-light headroom",
+        attrs: { id: "navbar-main" }
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("a", {
+            staticClass: "navbar-brand mr-lg-5",
+            attrs: { href: "../index.html" }
+          }),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "navbar-collapse collapse",
+              attrs: { id: "navbar_global" }
+            },
+            [
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "ul",
+                {
+                  staticClass:
+                    "navbar-nav navbar-nav-hover align-items-lg-center"
+                },
+                [
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c("router-link", { attrs: { to: "/" } }, [
+                        _vm._v("Home")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "nav-item dropdown" },
+                    [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _vm._l(_vm.categoryNav, function(eachOne) {
+                        return _c(
+                          "div",
+                          {
+                            key: _vm.categoryNav.index,
+                            staticClass: "dropdown-menu"
+                          },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "dropdown-item",
+                                attrs: {
+                                  to: {
+                                    path:
+                                      "/category/post/" +
+                                      eachOne.id +
+                                      "/" +
+                                      eachOne.name
+                                  }
+                                }
+                              },
+                              [_vm._v(_vm._s(eachOne.name))]
+                            )
+                          ],
+                          1
+                        )
+                      })
+                    ],
+                    2
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(3)
+            ]
+          )
+        ])
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "nav",
-        {
-          staticClass:
-            "navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom",
-          attrs: { id: "navbar-main" }
-        },
-        [
-          _c("div", { staticClass: "container" }, [
-            _c("a", {
-              staticClass: "navbar-brand mr-lg-5",
-              attrs: { href: "../index.html" }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "navbar-toggler",
-                attrs: {
-                  type: "button",
-                  "data-toggle": "collapse",
-                  "data-target": "#navbar_global",
-                  "aria-controls": "navbar_global",
-                  "aria-expanded": "false",
-                  "aria-label": "Toggle navigation"
-                }
-              },
-              [_c("span", { staticClass: "navbar-toggler-icon" })]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "navbar-collapse collapse",
-                attrs: { id: "navbar_global" }
-              },
-              [
-                _c("div", { staticClass: "navbar-collapse-header" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-6 collapse-brand" }, [
-                      _c("a", { attrs: { href: "../../../index.html" } })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-6 collapse-close" }, [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "navbar-toggler",
-                          attrs: {
-                            type: "button",
-                            "data-toggle": "collapse",
-                            "data-target": "#navbar_global",
-                            "aria-controls": "navbar_global",
-                            "aria-expanded": "false",
-                            "aria-label": "Toggle navigation"
-                          }
-                        },
-                        [_c("span"), _vm._v(" "), _c("span")]
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "ul",
-                  {
-                    staticClass:
-                      "navbar-nav navbar-nav-hover align-items-lg-center"
-                  },
-                  [
-                    _c("li", { staticClass: "nav-item dropdown" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link",
-                          attrs: {
-                            href: "#",
-                            "data-toggle": "dropdown",
-                            role: "button"
-                          }
-                        },
-                        [
-                          _c("i", { staticClass: "ni ni-ui-04 d-lg-none" }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "nav-link-inner--text" }, [
-                            _vm._v("Components")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "dropdown-menu dropdown-menu-xl" },
-                        [
-                          _c("div", { staticClass: "dropdown-menu-inner" }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "media d-flex align-items-center",
-                                attrs: {
-                                  href:
-                                    "https://demos.creative-tim.com/argon-design-system/docs/getting-started/overview.html"
-                                }
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "icon icon-shape bg-gradient-primary rounded-circle text-white"
-                                  },
-                                  [_c("i", { staticClass: "ni ni-spaceship" })]
-                                ),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "media-body ml-3" }, [
-                                  _c(
-                                    "h6",
-                                    {
-                                      staticClass:
-                                        "heading text-primary mb-md-1"
-                                    },
-                                    [_vm._v("Getting started")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "p",
-                                    {
-                                      staticClass:
-                                        "description d-none d-md-inline-block mb-0"
-                                    },
-                                    [
-                                      _vm._v(
-                                        "Learn how to use compiling Scss, change brand colors and more."
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "media d-flex align-items-center",
-                                attrs: {
-                                  href:
-                                    "https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html"
-                                }
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "icon icon-shape bg-gradient-success rounded-circle text-white"
-                                  },
-                                  [_c("i", { staticClass: "ni ni-palette" })]
-                                ),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "media-body ml-3" }, [
-                                  _c(
-                                    "h6",
-                                    {
-                                      staticClass:
-                                        "heading text-primary mb-md-1"
-                                    },
-                                    [_vm._v("Foundation")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "p",
-                                    {
-                                      staticClass:
-                                        "description d-none d-md-inline-block mb-0"
-                                    },
-                                    [
-                                      _vm._v(
-                                        "Learn more about colors, typography, icons and the grid system we used for ."
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "media d-flex align-items-center",
-                                attrs: {
-                                  href:
-                                    "https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
-                                }
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "icon icon-shape bg-gradient-warning rounded-circle text-white"
-                                  },
-                                  [_c("i", { staticClass: "ni ni-ui-04" })]
-                                ),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "media-body ml-3" }, [
-                                  _c(
-                                    "h5",
-                                    {
-                                      staticClass:
-                                        "heading text-warning mb-md-1"
-                                    },
-                                    [_vm._v("Components")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "p",
-                                    {
-                                      staticClass:
-                                        "description d-none d-md-inline-block mb-0"
-                                    },
-                                    [
-                                      _vm._v(
-                                        "Browse our 50 beautiful handcrafted components offered in the Free version."
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ]
-                            )
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", { staticClass: "nav-item dropdown" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link",
-                          attrs: {
-                            href: "#",
-                            "data-toggle": "dropdown",
-                            role: "button"
-                          }
-                        },
-                        [
-                          _c("i", {
-                            staticClass: "ni ni-collection d-lg-none"
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "nav-link-inner--text" }, [
-                            _vm._v("Examples")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "dropdown-menu" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "../examples/landing.html" }
-                          },
-                          [_vm._v("Landing")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "../examples/profile.html" }
-                          },
-                          [_vm._v("Profile")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "../examples/login.html" }
-                          },
-                          [_vm._v("Login")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "../examples/register.html" }
-                          },
-                          [_vm._v("Register")]
-                        )
-                      ])
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "ul",
-                  {
-                    staticClass: "navbar-nav align-items-lg-center ml-lg-auto"
-                  },
-                  [
-                    _c("li", { staticClass: "nav-item" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link nav-link-icon",
-                          attrs: {
-                            href: "https://www.facebook.com/CreativeTim/",
-                            target: "_blank",
-                            "data-toggle": "tooltip",
-                            title: "Like us on Facebook"
-                          }
-                        },
-                        [
-                          _c("i", { staticClass: "fa fa-facebook-square" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "nav-link-inner--text d-lg-none" },
-                            [_vm._v("Facebook")]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", { staticClass: "nav-item" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link nav-link-icon",
-                          attrs: {
-                            href:
-                              "https://www.instagram.com/creativetimofficial",
-                            target: "_blank",
-                            "data-toggle": "tooltip",
-                            title: "Follow us on Instagram"
-                          }
-                        },
-                        [
-                          _c("i", { staticClass: "fa fa-instagram" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "nav-link-inner--text d-lg-none" },
-                            [_vm._v("Instagram")]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", { staticClass: "nav-item" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link nav-link-icon",
-                          attrs: {
-                            href: "https://twitter.com/creativetim",
-                            target: "_blank",
-                            "data-toggle": "tooltip",
-                            title: "Follow us on Twitter"
-                          }
-                        },
-                        [
-                          _c("i", { staticClass: "fa fa-twitter-square" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "nav-link-inner--text d-lg-none" },
-                            [_vm._v("Twitter")]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", { staticClass: "nav-item" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link nav-link-icon",
-                          attrs: {
-                            href:
-                              "https://github.com/creativetimofficial/argon-design-system",
-                            target: "_blank",
-                            "data-toggle": "tooltip",
-                            title: "Star us on Github"
-                          }
-                        },
-                        [
-                          _c("i", { staticClass: "fa fa-github" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "nav-link-inner--text d-lg-none" },
-                            [_vm._v("Github")]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      { staticClass: "nav-item d-none d-lg-block ml-lg-4" },
-                      [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "btn btn-neutral btn-icon",
-                            attrs: {
-                              href:
-                                "https://www.creative-tim.com/product/argon-design-system-pro?ref=ads-upgrade-pro",
-                              target: "_blank"
-                            }
-                          },
-                          [
-                            _c("span", { staticClass: "btn-inner--icon" }, [
-                              _c("i", { staticClass: "fa fa-shopping-cart" })
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "nav-link-inner--text" },
-                              [_vm._v("Upgrade to PRO")]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "btn btn-neutral btn-icon",
-                            attrs: {
-                              href:
-                                "https://www.creative-tim.com/product/argon-design-system",
-                              target: "_blank"
-                            }
-                          },
-                          [
-                            _c("span", { staticClass: "btn-inner--icon" }, [
-                              _c("i", {
-                                staticClass: "fa fa-cloud-download mr-2"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "nav-link-inner--text" },
-                              [_vm._v("Download")]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ]
-            )
-          ])
-        ]
-      )
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbar_global",
+          "aria-controls": "navbar_global",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("span", { staticClass: "navbar-toggler-icon" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "navbar-collapse-header" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-6 collapse-brand" }, [
+          _c("a", { attrs: { href: "../../../index.html" } })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6 collapse-close" }, [
+          _c(
+            "button",
+            {
+              staticClass: "navbar-toggler",
+              attrs: {
+                type: "button",
+                "data-toggle": "collapse",
+                "data-target": "#navbar_global",
+                "aria-controls": "navbar_global",
+                "aria-expanded": "false",
+                "aria-label": "Toggle navigation"
+              }
+            },
+            [_c("span"), _vm._v(" "), _c("span")]
+          )
+        ])
+      ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "nav-link",
+        attrs: { href: "#", "data-toggle": "dropdown", role: "button" }
+      },
+      [
+        _c("i", { staticClass: "ni ni-collection d-lg-none" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "nav-link-inner--text" }, [
+          _vm._v("Categories")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "ul",
+      { staticClass: "navbar-nav align-items-lg-center ml-lg-auto" },
+      [
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link nav-link-icon",
+              attrs: {
+                href: "https://www.facebook.com/CreativeTim/",
+                target: "_blank",
+                "data-toggle": "tooltip",
+                title: "Like us on Facebook"
+              }
+            },
+            [
+              _c("i", { staticClass: "fa fa-facebook-square" }),
+              _vm._v(" "),
+              _c("span", { staticClass: "nav-link-inner--text d-lg-none" }, [
+                _vm._v("Facebook")
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link nav-link-icon",
+              attrs: {
+                href: "https://www.instagram.com/creativetimofficial",
+                target: "_blank",
+                "data-toggle": "tooltip",
+                title: "Follow us on Instagram"
+              }
+            },
+            [
+              _c("i", { staticClass: "fa fa-instagram" }),
+              _vm._v(" "),
+              _c("span", { staticClass: "nav-link-inner--text d-lg-none" }, [
+                _vm._v("Instagram")
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link nav-link-icon",
+              attrs: {
+                href: "https://twitter.com/creativetim",
+                target: "_blank",
+                "data-toggle": "tooltip",
+                title: "Follow us on Twitter"
+              }
+            },
+            [
+              _c("i", { staticClass: "fa fa-twitter-square" }),
+              _vm._v(" "),
+              _c("span", { staticClass: "nav-link-inner--text d-lg-none" }, [
+                _vm._v("Twitter")
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item d-none d-lg-block ml-lg-4" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-neutral btn-icon",
+              attrs: { href: "/login", target: "_blank" }
+            },
+            [
+              _c("span", { staticClass: "btn-inner--icon" }, [
+                _c("i", { staticClass: "fa fa-shopping-cart" })
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "nav-link-inner--text" }, [
+                _vm._v("Login")
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-neutral btn-icon",
+              attrs: { href: "/register", target: "_blank" }
+            },
+            [
+              _c("span", { staticClass: "btn-inner--icon" }, [
+                _c("i", { staticClass: "fa fa-cloud-download mr-2" })
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "nav-link-inner--text" }, [
+                _vm._v("Signup")
+              ])
+            ]
+          )
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -53686,15 +53610,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Nav_vue_vue_type_template_id_7cd4f788___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Nav.vue?vue&type=template&id=7cd4f788& */ "./resources/js/components/Nav.vue?vue&type=template&id=7cd4f788&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Nav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Nav.vue?vue&type=script&lang=js& */ "./resources/js/components/Nav.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Nav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Nav_vue_vue_type_template_id_7cd4f788___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Nav_vue_vue_type_template_id_7cd4f788___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -53708,6 +53634,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/Nav.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Nav.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/Nav.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Nav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Nav.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Nav.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Nav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
