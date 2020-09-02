@@ -1,6 +1,28 @@
 <template>
     <div>
         <div class="wrapper container-pad">
+            <section class="section-profile-cover section-shaped my-0">
+            <div class="section section-hero section-shaped">
+                <div class="shape shape-style-3 shape-default">
+                <span class="span-150"></span>
+                <span class="span-50"></span>
+                <span class="span-50"></span>
+                <span class="span-75"></span>
+                <span class="span-100"></span>
+                <span class="span-75"></span>
+                <span class="span-50"></span>
+                <span class="span-100"></span>
+                <span class="span-50"></span>
+                <span class="span-100"></span>
+                </div>
+                
+                <div class="separator separator-bottom separator-skew zindex-100">
+                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+                </div>
+            </div>
+            </section>
             <section class="section bg-secondary">
                 <div class="container">
                     <div class="card card-profile shadow mt--300">
@@ -70,6 +92,6 @@ export default {
 
 <style  scoped>
     .container-pad{
-        padding-top:27rem;
+        padding-top:0;
     }
 </style>

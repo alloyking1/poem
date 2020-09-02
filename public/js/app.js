@@ -53690,19 +53690,19 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     path: '/',
     name: 'Landing',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./components/Landing */ "./resources/js/components/Landing.vue"));
+      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./components/Landing */ "./resources/js/components/Landing.vue"));
     }
   }, {
     path: "/category/post/:id/:name",
     name: 'categoryPost',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./components/CategoryPost */ "./resources/js/components/CategoryPost.vue"));
+      return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./components/CategoryPost */ "./resources/js/components/CategoryPost.vue"));
     }
   }, {
     path: "/category/single/post/:postId/",
     name: 'singlePost',
     component: function component() {
-      return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./components/SinglePost */ "./resources/js/components/SinglePost.vue"));
+      return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./components/SinglePost */ "./resources/js/components/SinglePost.vue"));
     }
   }]
 });

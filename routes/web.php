@@ -37,5 +37,7 @@ Route::get('/product/{id?}', 'ProductsController@Allproduct');
 Route::get('/product/single/{id?}', 'ProductsController@SingleProduct');
 Route::post('/order/gig/{id?}', 'OrderController@OrderProduct');
 
+// comment
+Route::post('/user/poem/comment/{id?}', 'CommentController@save');
 Route::get("/test", 'AdminController@test');
 

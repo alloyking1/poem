@@ -14,7 +14,8 @@ class LandingController extends Controller
      */
 
     public function index(){
-        return view('welcome');
+        $cathegory = Cathegory::all();
+        return view('welcomeBlade',compact('cathegory'));
     }
 
     /**
@@ -50,4 +51,25 @@ class LandingController extends Controller
         $PoemWriter = $singlePoem->poem_writer; //get user details from relationship
         return response()->json($singlePoem, 200);
     }
+
+
+    /**
+     * Like a particular post
+     */
+
+    public function like(Request $request){
+        $id = $request->id;
+        $singlePoem = Product::find($id);
+        if($singlePoem->like === NULL){
+            $singlePoem->like = '1';
+            $singlePoem->save();
+            return response()->json($singlePoem, 200);
+        }else{
+
+            $singlePoem->like = $singlePoem->like + 1;
+            $singlePoem->save();
+            return response()->json($singlePoem, 200);
+        }
+    }
+
 }

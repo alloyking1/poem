@@ -51,6 +51,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -91,7 +113,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container-pad[data-v-6961d49a]{\n    padding-top:27rem;\n}\n", ""]);
+exports.push([module.i, "\n.container-pad[data-v-6961d49a]{\n    padding-top:0;\n}\n", ""]);
 
 // exports
 
@@ -145,6 +167,45 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "wrapper container-pad" }, [
+      _c(
+        "section",
+        { staticClass: "section-profile-cover section-shaped my-0" },
+        [
+          _c("div", { staticClass: "section section-hero section-shaped" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "separator separator-bottom separator-skew zindex-100"
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    attrs: {
+                      x: "0",
+                      y: "0",
+                      viewBox: "0 0 2560 100",
+                      preserveAspectRatio: "none",
+                      version: "1.1",
+                      xmlns: "http://www.w3.org/2000/svg"
+                    }
+                  },
+                  [
+                    _c("polygon", {
+                      staticClass: "fill-white",
+                      attrs: { points: "2560 0 2560 100 0 100" }
+                    })
+                  ]
+                )
+              ]
+            )
+          ])
+        ]
+      ),
+      _vm._v(" "),
       _c("section", { staticClass: "section bg-secondary" }, [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "card card-profile shadow mt--300" }, [
@@ -215,7 +276,34 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "shape shape-style-3 shape-default" }, [
+      _c("span", { staticClass: "span-150" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-50" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-50" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-75" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-100" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-75" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-50" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-100" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-50" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "span-100" })
+    ])
+  }
+]
 render._withStripped = true
 
 

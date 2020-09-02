@@ -27,5 +27,6 @@ Route::prefix('user')->group(function (){
     Route::get('/category', 'LandingController@category');
     Route::get('/category/post/{id?}', 'LandingController@categoryPost');
     Route::get('/category/single/post/{id?}', 'LandingController@SinglePost');
-    Route::get('/post/like/{id?}', 'LandingController@SinglePost');
+    Route::get('/post/like/{id?}', 'LandingController@Like');
+    Route::get('/poem/comment/fetch/{id?}', 'CommentController@fetch');
 });

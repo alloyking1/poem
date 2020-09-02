@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Cathegory;
+use App\Comment;
 
 class Product extends Model
 {
@@ -17,8 +18,9 @@ class Product extends Model
         return $this->belongsTo('App\User', 'user_id');
     }
 
-    // post like relationship
-    public function likes(){
-        return $this->belongsTo('AppLike');
+    // fetch comments
+    public function poem_comment(){
+        return $this->hasMany('App\Comment', 'post_id');
     }
+
 }

@@ -5,7 +5,7 @@
 <section class="py-6">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-5">
             
             <!-- Form -->
             <form class="rounded shadow">
@@ -44,9 +44,9 @@
             </div>
         </div> <!-- / .row -->
 
-        <br><br><br>
-        <div class="row">
-            <div class="card card-row shadow-light-lg mb-6">
+        <br><br>
+        <div class="row mt-5 p-4">
+            <div class="card card-row shadow shadow-light-lg lift lift-lg mb-6">
                 <div class="" style="padding:5%;">
                     <div class="col-md-12">
                         <div class="align-items-center">
@@ -117,9 +117,9 @@
     </div>
 </section>
 
-<section class=" mb-4 gray-color pad-section">
+<section class="mt-5 mb-4 gray-color pad-section">
     <div class="container">
-        <div class="col-12  text-center line-height margin-t">
+        <div class="col-12  text-center line-height margin-t p-5">
         
             <!-- Heading -->
             <h1>
@@ -133,16 +133,16 @@
 
 
         </div>
-        <div class="row align-items-center">
+        <div class="row align-items-center mb-5">
             @foreach ($cathegory as $each)
             <div class="col-md-4">
 
                 <!-- Card -->
                 <!-- <div class="card rounded-lg shadow-lg mb-6 mb-md-0 aos-init aos-animate d-flex"> -->
-                <div class="card mb-6 shadow-light-lg lift lift-lg">
+                <div class="card mb-6 shadow shadow-light-lg lift lift-lg">
 
                     <!-- Body -->
-                    <a href="/product/{{ $each->id }}" target="_blank" style="text-decoration:none">
+                    <a href="/product/{{ $each->id }}" style="text-decoration:none">
                         <div class="card-body py-6 py-md-8">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-xl-9">
@@ -158,15 +158,16 @@
                                     <p class="text-center text-muted mb-6 mb-md-8">
                                     
                                         {{ str_limit($each->description, $limit= 100) }}
+                                        <br>See posts<i class="ni ni-bold-right text-primary"></i>
                                     </p>
 
-                                    read more >>>
                                 </div>
                             </div> <!-- / .row -->
                         </div>
                     </a>
 
                 </div>
+                <br>
             </div>
             
             @endforeach

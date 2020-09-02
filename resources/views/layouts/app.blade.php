@@ -26,7 +26,7 @@
 
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="mb-3">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -39,11 +39,38 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item dropdown" onclick="mycategory()">
+                            <a href="#" class="nav-link" data-toggle="dropdown" role="button">
+                                <i class="ni ni-collection d-lg-none"></i>
+                                <span class="nav-link-inner--text">Categories</span>
+                            </a>
+                            <div class="dropdown-menu p-3" id="categoryDiv">
+                                <a href="" id="categoryLink">kjlkjkl</a>
+                                <hr>
+                            </div>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="https://www.facebook.com/CreativeTim/" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
+                            <i class="fa fa-facebook-square"></i>
+                            <span class="nav-link-inner--text d-lg-none">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
+                            <i class="fa fa-instagram"></i>
+                            <span class="nav-link-inner--text d-lg-none">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+                            <i class="fa fa-twitter-square"></i>
+                            <span class="nav-link-inner--text d-lg-none">Twitter</span>
+                            </a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -71,8 +98,9 @@
                                         @csrf
                                     </form>
                                     <hr> 
-                                    <a class="dropdown-item" href="/user/profile">Profile
-                                    </a>
+                                    <a class="dropdown-item" href="/home">DashBoard</a>
+                                    <hr> 
+                                    <a class="dropdown-item" href="/user/profile">Profile</a>
                                 </div>
                             </li>
                         @endguest
@@ -86,4 +114,33 @@
         </main>
     </div>
 </body>
+
+<script src="{{ mix('js/app.js') }}"></script>
+<script>
+    /*
+    * make api call to fetch categories
+    * @param post ID
+    * @return response
+    */
+    function mycategory(){
+        fetch('/api/user/category', {headers:new Headers({'Accept':'text/plain','X-Your-Custom-Header':'example value'})})
+        .then(response =>{
+            return response.json();
+        })
+        .then(json =>{
+            var category = json;
+            
+            for(var i = 0, length = category.length; i < length; i++){
+                // console.log(category[i].name);
+                // document.getElementById('categoryDiv').innerHTML = category[i].name;
+
+                var elemP = document.getElementById("categoryLink");
+                var cotegoryText = document.createTextNode(category[i].name);
+                elemP.appendChild(cotegoryTexts);
+
+                document.getElementById('postComments').appendChild(elemP);
+            }
+        })
+    }
+</script>
 </html>

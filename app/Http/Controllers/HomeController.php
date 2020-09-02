@@ -29,7 +29,6 @@ class HomeController extends Controller
     {
         $userOrders = $this->Orders();
         $cathegory = Cathegory::all(); 
-        // return response()->json($cathegory, 200);
         return view('home',compact('cathegory','userOrders'));
     }
 
