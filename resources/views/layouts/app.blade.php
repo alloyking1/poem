@@ -45,8 +45,8 @@
                                 <span class="nav-link-inner--text">Categories</span>
                             </a>
                             <div class="dropdown-menu p-3" id="categoryDiv">
-                                <a href="" id="categoryLink">kjlkjkl</a>
-                                <hr>
+                                <!-- <a href="/product/1" id="categoryLink">kjlkjkl</a> -->
+                                <!-- <hr> -->
                             </div>
                         </li>
                     </ul>
@@ -130,15 +130,16 @@
         .then(json =>{
             var category = json;
             
-            for(var i = 0, length = category.length; i < length; i++){
-                // console.log(category[i].name);
-                // document.getElementById('categoryDiv').innerHTML = category[i].name;
+            for(var i = 0, length = category.length; i < length; i++){ 
+                var a = document.createElement('a'); 
+                var spaceLine = document.createElement('hr');   
+                var link = document.createTextNode(category[i].name); 
 
-                var elemP = document.getElementById("categoryLink");
-                var cotegoryText = document.createTextNode(category[i].name);
-                elemP.appendChild(cotegoryTexts);
-
-                document.getElementById('postComments').appendChild(elemP);
+                a.appendChild(link);  
+                // a.title = category[i].name; 
+                a.href = "/product/"+category[i].id;
+                document.getElementById('categoryDiv').appendChild(a); 
+                document.getElementById('categoryDiv').appendChild(spaceLine); 
             }
         })
     }
