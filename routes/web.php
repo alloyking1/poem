@@ -15,6 +15,9 @@ Auth::routes();
 
 Route::prefix('/')->group(function(){
     Route::get('/', 'LandingController@index');
+    Route::get('/about', 'LandingController@about');
+    Route::get('/contact', 'LandingController@contact');
+    Route::get('/privacy/policy', 'LandingController@privacy');
 });
 
 // auth user route

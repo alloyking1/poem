@@ -45,9 +45,16 @@
                                 <span class="nav-link-inner--text">Categories</span>
                             </a>
                             <div class="dropdown-menu p-3" id="categoryDiv">
-                                <!-- <a href="/product/1" id="categoryLink">kjlkjkl</a> -->
-                                <!-- <hr> -->
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="/privacy/policy">Privacy Policy</a>
                         </li>
                     </ul>
 

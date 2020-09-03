@@ -18,6 +18,20 @@ class LandingController extends Controller
         return view('welcomeBlade',compact('cathegory'));
     }
 
+    /**display the about page */
+    public function about(){
+        return "true";
+    }
+
+    /**display the contact page */
+    public function contact(){
+        return "true";
+    }
+    /**display the privacy policy page */
+    public function privacy(){
+        return "true";
+    }
+
     /**
      * gets all cathegories
      * @param $request $id

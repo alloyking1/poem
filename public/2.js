@@ -113,6 +113,53 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -127,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
     fetCategory: function fetCategory() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/user/category').then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/category").then(function (res) {
         _this.category = res.data;
       });
     }
@@ -152,6 +199,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", {}, [
+    _c("h1", [_vm._v("sdfsdfs")]),
+    _vm._v(" "),
     _c("div", { staticClass: "wrapper" }, [
       _c("div", { staticClass: "section section-hero section-shaped" }, [
         _vm._m(0),
@@ -230,7 +279,9 @@ var render = function() {
                           }
                         },
                         [
-                          _vm._v("See posts\n                  "),
+                          _vm._v(
+                            "\n                See posts\n                "
+                          ),
                           _c("i", {
                             staticClass: "ni ni-bold-right text-primary"
                           })
@@ -354,7 +405,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now."
+                      "\n                  The time is now for it to be okay to be\n                  great. People in this world shun people\n                  for being great. For being a bright\n                  color. For standing out. But the time is\n                  now.\n                "
                     )
                   ]),
                   _vm._v(" "),
@@ -374,7 +425,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn."
+                      "\n                  There’s nothing I really wanted to do in\n                  life that I wasn’t able to get good at.\n                  That’s my skill. I’m not really\n                  specifically talented at anything except\n                  for the ability to learn.\n                "
                     )
                   ]),
                   _vm._v(" "),
@@ -394,7 +445,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "That’s what I do. That’s what I’m here for. Don’t be afraid to be wrong because you can’t learn anything from a compliment. If everything I did failed - which it doesn't."
+                      "\n                  That’s what I do. That’s what I’m here\n                  for. Don’t be afraid to be wrong because\n                  you can’t learn anything from a\n                  compliment. If everything I did failed -\n                  which it doesn't.\n                "
                     )
                   ]),
                   _vm._v(" "),
@@ -434,7 +485,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "lead" }, [
           _vm._v(
-            "The time is now for it to be okay to be great. For being a bright color. For standing out."
+            "\n              The time is now for it to be okay to be great.\n              For being a bright color. For standing out.\n            "
           )
         ])
       ])
